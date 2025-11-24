@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temperature Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:#f9fafb;
+      padding:40px;
+      display:flex;
+      justify-content:center;
+    }
+    .container {
+      max-width:800px;
+      background:white;
+      border-radius:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      padding:30px;
+    }
+    h1 {
+      font-size:20px;
+      margin-bottom:25px;
+    }
+    .zone {
+      border:1px solid #e5e7eb;
+      border-radius:8px;
+      padding:20px;
+      margin-bottom:20px;
+    }
+    .zone-title {
+      font-weight:bold;
+      color:#374151;
+      margin-bottom:12px;
+    }
+    label {
+      display:block;
+      color:#555;
+      font-size:14px;
+      margin-bottom:6px;
+    }
+    select, input {
+      border:1px solid #ccc;
+      border-radius:6px;
+      padding:8px 10px;
+      font-size:14px;
+    }
+    .row {
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .unit {
+      color:#555;
+      font-size:14px;
+    }
+    button {
+      background:#f97316;
+      color:white;
+      border:none;
+      border-radius:8px;
+      padding:10px 16px;
+      cursor:pointer;
+      margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Alert Thresholds</h1>
+
+    <div class="zone">
+      <div class="zone-title">Active Loading / Unloading (Least Controlled)</div>
+      <label>Alert if temperature</label>
+      <div class="row">
+        <select>
+          <option>(ambient) rises above</option>
+          <option>(ambient) falls below</option>
+        </select>
+        <input type="number" value="32" />
+        <span class="unit">°F</span>
+      </div>
+    </div>
+
+    <div class="zone">
+      <div class="zone-title">Closely Monitor (Moderate Control)</div>
+      <label>Alert if temperature</label>
+      <div class="row">
+        <select>
+          <option>(ambient) rises above</option>
+          <option>(ambient) falls below</option>
+        </select>
+        <input type="number" value="32" />
+        <span class="unit">°F</span>
+      </div>
+    </div>
+
+    <div class="zone">
+      <div class="zone-title">Not Loading / Unloading (Strictly Controlled)</div>
+      <label>Alert if temperature</label>
+      <div class="row">
+        <select>
+          <option>(ambient) rises above</option>
+          <option>(ambient) falls below</option>
+        </select>
+        <input type="number" value="32" />
+        <span class="unit">°F</span>
+      </div>
+    </div>
+
+    <button>Save Alert</button>
+  </div>
+</body>
+</html>
